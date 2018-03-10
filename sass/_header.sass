@@ -1,0 +1,140 @@
+
+.header-socials
+	background-color: #fff
+	.container
+		max-width: 1367px
+		margin: 0 auto
+		// border: 1px solid red
+		padding: 8px 0
+		display: flex
+		justify-content: space-between
+	
+
+.button-container
+	font-family: "RobotoRegular", sans-serif
+	font-size: 18px
+	font-weight: 400
+	display: flex
+	align-items: center
+	a
+		background-color: $red-header-about
+		color: #d8d8d8
+		border-radius: 4px
+		padding: 7px 9px
+	
+		
+	span
+		margin-right: 10px
+			
+		
+
+.socials-sprite
+	max-width: 167px
+	// border: 1px solid blue
+	.icon
+		display: inline-block
+		
+// 	make the @extend if needed to repeate styles
+// font-size: 18px
+// example
+// .lemonade 
+//   border: 1px yellow
+//   background-color: #fdd
+
+// .strawberry 
+//   @extend .lemonade
+//   border-color: pink
+
+// ************ header-top *******************
+.header-top
+	background-color: #404040
+	.container
+		max-width: 1367px
+		margin: 0 auto
+		// border: 1px solid red
+		padding: 32px 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	.logo
+		background: url(../images/logo/winner-com.png)
+		width: 174px
+		height: 34px
+		display: flex
+	
+.menu a
+	color: #cccccc
+	text-decoration: none
+	font-family: "OpenSansRegular", sans-serif
+	font-size: 16px
+	margin-right: 46px
+	&:hover
+		color: $red-header-about
+	&:active 
+		color: darken($red-header-about, 30%)
+	&.is-active
+		color: $red-header-about
+
+
+.menu
+	.search
+		display: inline-block
+		width: 30px
+
+
+// **************** header-slider ***********************
+.header-slider
+	position: relative
+
+	.text
+		// border: 1px solid $white-color
+		position: absolute
+		top: 110px
+		left: 135px
+		max-width: 976px
+		color: $white-color
+		p:first-child, p:nth-of-type(2)
+			@include lato-regular-font
+		p:first-child
+			font-size: 40px	
+			margin-bottom: 42px
+		p:nth-of-type(2) 
+			@include lato-light-font
+			font-size: 80px
+			margin-bottom: 130px
+			
+			span
+				@include lato-regular-font
+				color: $red-header-about
+				font-weight: 800
+				
+		p:nth-of-type(3)
+			@include openSans-regular-font
+			font-size: 35px
+			margin-bottom: 30px
+		.link
+			@include lato-regular-font
+			background-color: $red-header-about
+			color: $white-color
+			font-size: 18px
+			padding: 14px 48px
+			border: 1px solid  $white-color
+			display: inline-block
+			margin-bottom: 74px
+.controls
+	.control-button
+		display: inline-block
+		width: 12px
+		height: 12px
+		border: 1px solid $white-color 
+		border-radius: 50%
+		margin-right: 25px
+	.is-active
+		background-color: $red-header-about
+
+
+
+
+
+

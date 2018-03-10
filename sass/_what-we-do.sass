@@ -1,0 +1,50 @@
+.what-we-do
+	
+	background-color: $red-what-we-do
+	color: #cccccc
+	width: 100%
+	padding: 85px 0
+
+.info-block
+	max-width: 1410px
+	margin: 0 auto
+	display: flex
+	flex-direction: row-reverse
+	justify-content: space-around
+	align-content: center
+
+	.text-button-block
+		max-width: 547px
+		
+	h2
+		position: relative
+		@include raleway-regular-font
+		text-transform: uppercase
+		color: #fff
+		margin-bottom: 60px
+		font-size: 45px
+		&::after
+			content: ''
+			@include white-line-what-wedo
+			position: absolute
+			top: 65px
+			left: 0px
+
+	.info-p
+		@include raleway-regular-font
+		font-size: 18px
+		line-height: 27px
+		margin-bottom: 35px
+		
+
+	.read-more
+		display: inline-block
+		@include openSans-regular-font
+		color: $white-color
+		font-size: 16px
+		background-color: #ff6161
+		padding: 10px 30px
+		border: 1px solid $white-color
+	figure
+		max-width: 740px
+		
