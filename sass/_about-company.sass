@@ -1,17 +1,23 @@
 .about-company
-	background: linear-gradient(rgba(58, 58, 58, 0.80), rgba(58, 58, 58, 0.80)), 
-	url(../images/sliderblur.png) no-repeat
+	background: linear-gradient(rgba(58, 58, 58, 0.80), rgba(58, 58, 58, 0.80)), url(/images/sliderblur.png) no-repeat
 	width: 100%
 	background-size: cover
 	padding: 134px 0
+
 	.container
 		max-width: 1252px
 		color: #fefefe
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
+
 	.info-item
-		margin-bottom: 35px
+		margin: 0 25px 35px
+		@media screen and (max-width: 656px)
+			text-align: center
+		@media screen and (max-width: 552px)
+			//text-align: initial
+
 		span
 			display: block
 			font-family: 'Exo', sans-serif
@@ -20,9 +26,9 @@
 			&:first-child
 				font-size: 45px
 				font-family: 'Exo', sans-serif
-				margin-right: 130px
+				//margin-right: 130px
 				margin-bottom: 30px
 				
-		&:nth-child(6)
-			span:first-child
-				margin-right: 0
+		//&:nth-child(6)
+		//	span:first-child
+		//		margin-right: 0

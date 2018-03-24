@@ -1,6 +1,6 @@
 .our-skills 
 	background-color: $white-color
-	padding: 100px 0 88px
+	padding: 100px 25px 88px
 	h2
 		@include sec-title-black-raleway-semibold
 		position: relative
@@ -15,40 +15,59 @@
     		
 
 	.skills-subtitle
-		border: 1px solid black
+		//border: 1px solid black
 		@include section-subtitle
 		max-width: 719px
 		margin: 0 auto 93px
 .container
 	display: flex
-	justify-content: space-between
+	justify-content: space-around
 	max-width: 1350px
 	margin: 0 auto
-
+	@media screen and (max-width: 800px)
+		flex-wrap: wrap
 
 .skills-diagram
-	border: 1px solid black
+	//border: 1px solid black
 	position: relative
+	margin-right: 150px
+	@media screen and (max-width: 1000px)
+		margin-right: 50px
+
+	@media screen and (max-width: 800px)
+		margin-right: 0
+		margin-bottom: 30px
 
 	.diagram-picture
 		max-width: 528px
+		@media screen and (max-width: 1000px)
+			margin-bottom: 30px
 	
 	.skill-list
 		position: absolute
 		max-width: 116px
 		right: -94px
 		top: 0
+		@media screen and (max-width: 1000px)
+			position: initial
+			max-width: 100%
     	
 		ul
 			@include lato-medium-font
 			text-transform: uppercase
 			color: $white-color
 			font-size: 15px
-			// line-height: 15px
+			@media screen and (max-width: 1000px)
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+
 			li
 				display: inline-block
 				border-radius: 4px
 				padding: 5px
+				@media screen and (max-width: 1000px)
+					margin: 10px
 
 				&:nth-child(-n+5)
 					margin-bottom: 5px
@@ -75,7 +94,7 @@
 
 
 .skills-description
-	border: 1px solid blue
+	//border: 1px solid blue
 	max-width: 620px
 	.skill-dir
 		@include lato-regular-font

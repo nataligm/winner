@@ -1,7 +1,7 @@
 .be-with-us
 	width: 100%
 	background-color: #2e2e2e
-	padding: 100px 0 100px  
+	padding: 100px 0 100px
 	h2
 		@include sec-title-black-raleway-semibold
 		color: $white-color
@@ -15,17 +15,29 @@
 
 	.be-with-us-subtitle
 		@include section-subtitle
+		padding: 0 30px
 		color: #c6c6c6
 
 .contact-container
 	margin: 0 auto
+	padding: 0 30px
 	box-sizing: border-box
 	max-width: 1046px
 	display: flex
 	justify-content: space-between
+	@media screen and (max-width: 700px)
+		flex-wrap: wrap-reverse
+		.contact-column-1
+			margin-right: 0
+
 	.contact-column-1
 		box-sizing: border-box
+		//min-width: 400px
 		max-width: 675px
+		margin-right: 100px
+		@media screen and (max-width: 700px)
+			margin-right: 0
+
 		.input
 			width: 100%
 			background: #3e3e3e
@@ -72,8 +84,10 @@
 
 	.contact-column-2
 		@include raleway-regular-font
-		max-width: 223px
-		
+		width: 223px
+		min-width: 223px
+		margin-bottom: 60px
+
 		h3
 			color: #c1c1c1
 			font-size: 25px
