@@ -1,0 +1,124 @@
+.our-team-member
+	background-color: $white-color
+	padding: 100px 0 25px
+    width: 100%
+	h2 
+		@include sec-title-black-raleway-semibold
+		position: relative
+		
+		&::after
+			content: ''
+			@include red-line-section-title
+			position: absolute
+			bottom: -25px
+			left: 49%
+	.team-subtitle
+		margin: 0 auto
+		@include section-subtitle
+		max-width: 700px
+		padding: 0 10px
+		
+    	
+.members
+	display: flex
+	justify-content: space-around
+	flex-wrap: wrap
+	max-width: 1367px
+	border: 1px solid red
+	margin: 0 auto
+
+
+.member-item	
+	@include openSans-regular-font
+	padding-bottom: 25px
+	margin-bottom: 15px
+
+	border: 1px solid rgba(203, 203, 203, 0.5)
+	figure
+		position: relative
+		.know-more
+			display: none
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: linear-gradient(rgba(253, 48, 47, 0.85), 
+			rgba(253, 48, 47, 0.85))
+		.know-more
+			.button
+				display: inline-block
+				position: absolute
+				top: 150px
+				left: 28px
+				text-transform: uppercase
+				border: 1px solid #fff
+				padding: 22px 31px
+				vertical-align: middle
+				font-size: 30px
+
+		&:hover
+			.know-more
+				display: block	
+	
+	.member-info
+		padding-top: 37px
+		p
+			text-align: center
+	
+			&:first-child
+				color: #414141
+				font-weight: 600
+				font-size: 25px
+				padding-bottom: 10px
+			&:nth-child(2)
+				@mixin OpenSans-SemiBold 
+				color: $red-header-about
+				font-size: 13px
+				font-weight: 600
+				margin-bottom: 16px
+	.socials
+		max-width: 207px
+		margin: 0 auto
+		.icon-list
+			font-size: 0
+		li
+			display: inline-block
+
+
+		li:nth-child(-n+4)
+			margin-right: 5px
+
+		.icon
+			width: 37px
+			height: 36px
+			border-radius: 50%
+		.icon:hover
+			background-color: $red-header-about
+		.twitter
+			background: url(../images/icons/twitter.png) no-repeat
+			background-position: 7px 9px
+			background-color: #cfcfcf
+		.facebook
+			background: url(../images/icons/facebook.png) no-repeat
+			background-position: 14px 7px
+			background-color: #cfcfcf
+
+		.google
+			background: url(../images/icons/google.png) no-repeat
+			background-position: 7px 7px;
+			background-color: #cfcfcf
+
+		.behance
+			background: url(../images/icons/behance.png) no-repeat
+			background-position: 8px 10px
+			background-color: #cfcfcf
+		.linkedin
+			background: url(../images/icons/linkedin.png) no-repeat
+			background-position: 7px 7px
+			background-color: #cfcfcf
+
+		
+	
+		
+			

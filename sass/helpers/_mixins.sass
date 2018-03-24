@@ -1,6 +1,13 @@
 
 // ********************* f o n t s *********************
 
+// ************************ roboto-font *************************
+@mixin roboto-medium-font
+	font-family: "RobotoMedium", sans-serif
+	font-weight: 500
+	font-style: normal
+
+
 // ***********************lato-font******************************
 @mixin lato-regular-font
 	font-family: "LatoRegular", sans-serif
@@ -11,16 +18,54 @@
 	text-transform: uppercase
 	font-style: normal
 	font-weight: 400
+
+@mixin lato-medium-font
+	font-family: "LatoMedium", sans-serif
+	font-weight: 500
+	font-style: normal
+
+@mixin lato-light-italic
+	font-family: "LatoLightItalic", sans-serif
+	font-weight: 400
+
+
+
 // *********************openSans-font*************
 @mixin openSans-regular-font
 	font-family: "OpenSansRegular", sans-serif
+	font-weight: 400
+
+@mixin OpenSans-SemiBold 
+	font-family: "OpenSansSemiBold", sans-serif
+	font-weight: 600
 
 // *******************raleway-font*****************************
 @mixin raleway-regular-font
 	font-family: "RalewayRegular", sans-serif
 	font-weight: 400
 
+@mixin raleway-medium-font
+	font-family: "RalewayMedium", sans-serif
+	font-weight: 500
 
+@mixin sec-title-black-raleway-semibold
+	// display: inline-block
+	font-family: "RalewaySemiBold", sans-serif
+	font-style: normal
+	font-weight: 400
+	text-transform: uppercase
+	color: $sec-title-dark-color
+	font-size: 40px
+	text-align: center
+	margin: 0 auto 54px
+// ****************************************Exo2-font*************************************************
+@mixin exo-medium-font-about-company
+	font-family: "Exo2Medium", sans-serif
+	font-weight: 500
+
+@mixin exo-regular-font-about-company
+	font-family: "Exo2Regular", sans-serif
+	font-weight: 400
 
 // ************************* l i n e s *************************
 @mixin red-line-section-title
@@ -31,11 +76,44 @@
 	width: 33px
 	height: 5px
 	background-color: #fff
-// ************************************************
-@mixin sec-title-black-raleway-semibold
-	font-family: "RalewaySemiBold"
-	font-style: normal
-	font-weight: 400
-	text-transform: uppercase
-	color: #383737
-	font-size: 40px
+
+@mixin vertical-red-line-skills
+	width: 4px
+	height: 68px
+	background-color: $red-header-about
+
+@mixin small-red-line-bewith-us
+	width: 27px
+	height: 4px
+	background-color: $red-header-about
+
+
+// *************************** pricing-block pseudo-element *************************
+@mixin blue-ball-price-column
+	background-color: #46b7ef
+	width: 73px
+	height: 73px
+	border-radius: 50%
+@mixin blue-ball-most-popular
+	width: 70px
+	font-size: 13px
+	color: $white-color
+
+// **********************************************************
+@mixin section-subtitle
+	font-size: 20px
+	font-family: "RalewayRegular"
+	color: #6c6c6c
+	margin-bottom: 93px
+	font-weight: 400 
+	text-align: center
+	line-height: 30px
+	// margin: 0 auto
+
+
+	// "latest work" and "be with us" have different color 
+
+		// our pricing table has margin-bottom: 86px
+	// latest work has margin-bottom: 73px
+	
+	// is this property necessary?

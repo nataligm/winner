@@ -1,0 +1,138 @@
+.our-pricing-table
+	background-color: $light-grey-bg
+	width: 100%
+	padding: 100px 0
+	display: flex
+	flex-direction: column
+	align-items: center
+			
+	h2
+		@include sec-title-black-raleway-semibold
+		position: relative
+		
+						
+		&::after
+			content: ''
+			@include red-line-section-title
+			position: absolute
+			left: 45%
+			bottom: -25px
+    		
+		// all about equal section-title may be added to shared.sass
+	.pricing-subtitle
+		@include section-subtitle
+		margin-bottom: 86px
+		max-width: 875px	
+		text-align: center
+		padding: 0 10px
+		
+// ********************** verified ***********************************
+
+.pricing-block
+	max-width: 1367px
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-around
+	align-items: flex-end
+
+	.price-column,.active-col
+		@include lato-medium-font
+		padding-bottom: 33px	
+		padding-right: 10px
+		background-color: $white-color
+		box-sizing: border-box
+		color: $price-col-font-color
+		text-align: center
+		
+		.get-started-btn
+			display: inline-block
+			background-color: $red-pricing-block
+			filter: drop-shadow(0px 3px 3px #404040)
+			@include raleway-medium-font
+			font-size: 18px	
+
+	.about-package-list	
+		padding-top: 44px
+		padding-left: 10px
+		li
+			margin-bottom: 24px
+			font-size: 14px
+			text-align: left
+
+			&::before
+				content: url(../images/shape-7.png)
+				margin-right: 10px
+	
+// **************************************************
+.price-column
+	margin: 0 10px 10px
+	.package-type, .price
+		text-align: center
+		@include roboto-medium-font
+		font-weight: bold
+		color: $package-type-price-font
+		border-bottom: 1px solid #c9c9c9
+	.package-type
+		font-size: 25px
+		font-weight: 400
+		&.premium
+			position: relative
+
+    		
+			&::before
+				@include blue-ball-price-column
+				content: ''
+				position: absolute
+				top: -77px
+				right: -2px
+    
+			&::after
+				@include blue-ball-most-popular
+				@include lato-medium-font
+				content: 'Most popular'
+				position: absolute
+				line-height: 17px
+				right: 0px
+				top: -57px
+
+.price-column:not(.active-col)
+	width: 314px
+	padding-top: 50px
+	padding-left: 10px
+	border: 1px solid #cecece
+		
+	.package-type
+		padding-bottom: 20px
+		font-weight: bold
+	.get-started-btn
+		padding: 14px 61px
+
+.active-col
+	width: 345px
+	// height: 620px
+	padding-left: 15px
+	border: 3px solid $red-pricing-block
+
+	.package-type
+		padding-top: 42px
+		padding-bottom: 27px
+	.package-top-text
+		display: inline-block
+		background-color: $red-pricing-block
+		padding: 13px 14px
+		color: #fff
+	.get-started-btn
+		padding: 14px 70px
+	@media screen and (max-width: 1034px)
+		width: 314px
+
+.price
+	padding-top: 18px
+	padding-bottom: 24px
+	font-size: 15px
+	font-weight: bold
+	
+	.p-number
+		font-size: 47px
+	

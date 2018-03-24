@@ -4,10 +4,9 @@
 	.container
 		max-width: 1367px
 		margin: 0 auto
-		// border: 1px solid red
-		padding: 8px 0
 		display: flex
 		justify-content: space-between
+		padding: 8px 10px
 	
 
 .button-container
@@ -30,40 +29,37 @@
 
 .socials-sprite
 	max-width: 167px
-	// border: 1px solid blue
+	
 	.icon
 		display: inline-block
-		
-// 	make the @extend if needed to repeate styles
-// font-size: 18px
-// example
-// .lemonade 
-//   border: 1px yellow
-//   background-color: #fdd
-
-// .strawberry 
-//   @extend .lemonade
-//   border-color: pink
-
+		&:hover
+			transform: scale(1.2, 1.2)
+		&:active
+			transform: scale(0.95, 0.95)
 // ************ header-top *******************
-.header-top
+.header-navigation
 	background-color: #404040
 	.container
 		max-width: 1367px
 		margin: 0 auto
-		// border: 1px solid red
-		padding: 32px 0
 		display: flex
 		justify-content: space-between
 		align-items: center
+		padding: 22px 10px 32px
 
 	.logo
-		background: url(../images/logo/winner-com.png)
-		width: 174px
+		background: url(../images/logo/winner-com.png) no-repeat
+		min-width: 175px
 		height: 34px
 		display: flex
-	
+		margin-right: 100px
+		&:hover
+			transform: scale(1.1, 1.1)
+		&:active
+			transform: scale(0.95, 0.95)
+
 .menu a
+	white-space: nowrap
 	color: #cccccc
 	text-decoration: none
 	font-family: "OpenSansRegular", sans-serif
@@ -76,11 +72,25 @@
 	&.is-active
 		color: $red-header-about
 
+	@media screen and (max-width: 740px)
+		display: inline-block
+		margin-bottom: 15px
 
 .menu
+	@media screen and (max-width: 706px)
+		position: absolute
+		right: 0
+		top: 49px
+		width: 200px
+		display: flex
+		flex-direction: column
+		background: rgba(64,64,64, 0.9)
+		padding: 20px
+		z-index: 1000
 	.search
 		display: inline-block
 		width: 30px
+		margin-top: 10px
 
 
 // **************** header-slider ***********************
@@ -90,20 +100,55 @@
 	.text
 		// border: 1px solid $white-color
 		position: absolute
-		top: 110px
-		left: 135px
+		padding-top: 110px
+		padding-left: 135px
+		top: 0
+		left: 0
 		max-width: 976px
+		height: 100%
+		width: 100%
 		color: $white-color
+		@media screen and (max-width: 1445px)
+			padding-top: 60px
+		@media screen and (max-width: 1100px)
+			display: flex
+			align-items: center
+			padding: 0 50px
+			box-sizing: border-box
+
+		.slide-text_row
+			@media screen and (max-width: 1100px)
+				margin: 5px
+			@media screen and (max-width: 415px)
+				display: none
+		.slide-text_row:first-child
+			@media screen and (max-width: 670px)
+				display: none
+
 		p:first-child, p:nth-of-type(2)
 			@include lato-regular-font
+
 		p:first-child
 			font-size: 40px	
 			margin-bottom: 42px
+			@media screen and (max-width: 1200px)
+				font-size: 30px
+			@media screen and (max-width: 750px)
+				font-size: 25px
+			@media screen and (max-width: 515px)
+				margin-bottom: 20px
+
 		p:nth-of-type(2) 
 			@include lato-light-font
 			font-size: 80px
 			margin-bottom: 130px
-			
+			@media screen and (max-width: 1330px)
+				margin-bottom: 70px
+			@media screen and (max-width: 1200px)
+				font-size: 60px
+			@media screen and (max-width: 750px)
+				font-size: 40px
+
 			span
 				@include lato-regular-font
 				color: $red-header-about
@@ -122,19 +167,158 @@
 			border: 1px solid  $white-color
 			display: inline-block
 			margin-bottom: 74px
+			@media screen and (max-width: 515px)
+				margin-bottom: 34px
+
+			&:hover
+				background: radial-gradient(rgba(253, 47, 47, 1), rgba(253, 47, 47, 0.5))
+				color: #c1c1c1
+				border-color: #c1c1c1
+
+			&:active
+				box-shadow: inset 0 0 10px 0 black
+				color: #666666
+				border-color: #666666
+
 .controls
 	.control-button
+		border: 1px solid $white-color
 		display: inline-block
 		width: 12px
 		height: 12px
-		border: 1px solid $white-color 
 		border-radius: 50%
 		margin-right: 25px
 	.is-active
 		background-color: $red-header-about
 
+.about-us
+	background: url('/images/bg/bac-pic-crop3-header-back.png') no-repeat
+	background-size: cover
+
+	h2
+		@include sec-title-black-raleway-semibold
+		position: relative
+		&::after
+			content: ''
+			@include red-line-section-title
+			position: absolute
+			left: 48%
+			top: 56px
+
+	.about-us-subtitle
+		@include section-subtitle
+		max-width: 762px
+		margin: 0 auto 45px
+.about-us-container
+	max-width: 1376px
+	margin: 0 auto
+	// border: 1px solid black
+
+.about-us-top
+	display: flex
+	justify-content: space-around
+	margin-bottom: 99px
+	flex-wrap: wrap
+	.column
+		@include raleway-regular-font
+		color: #676767
+		width: 273px
+		// height: 349px
+		background-color: #fff
+		font-size: 15px
+		border: 1px solid #cecece
+		position: relative
+		background: url('../images/redpart-about-us.png') no-repeat, #fff
+		padding-bottom: 61px
+		box-sizing: border-box
+		margin-bottom: 5px
+
+		img
+			position: relative
+		.circle
+			border: 4px solid $red-header-about
+			border-radius: 50%
+			width: 80px
+			height: 80px
+			box-sizing: border-box
+			background-color: $white-color
+			margin: 111px auto 32px
+			display: flex
+			align-items: center
+			justify-content: center
+
+			.circle-icon
+				width: 25px
+
+		span
+			@include OpenSans-SemiBold 
+			color: $white-color
+			position: absolute
+			top: 49px
+			left: 34%
+
+		.column-text
+			width: 197px
+			line-height: 21px
+			margin: 0 auto
+			text-align: center
+			box-sizing: border-box
+		
+	.networking
+		.circle
+			border: 3px solid #fff
+			.circle-icon
+				width: 100%
+
+.about-us-bottom
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	margin-bottom: 50px
+	width: 100%
+	// border: 1px solid green
+	.bottom-column
+		@include raleway-regular-font
+		padding-top: 250px
+		width: 304px
+		font-size: 14px
+		line-height: 21px
+		color: $grey-font-color-header
+		position: relative
+		.squares
+			.square
+				position: absolute
+				width: 140px
+				height: 140px
+				border: 1px solid #6b6b6b
+				transform: rotate(45deg)
+				top: 70px
+			.square.left
+				left: 74px
+			.square.right
+				left: 90px
+			.square.center
+				left: 88px
+				top: 76px
+				width: 130px
+				height: 130px
+				border: none
+			img
+				position: absolute
+				width: 35px
+				top: 122px
+				left: 134px
 
 
+		.column-header
+			color: #4e4e4e
+			font-size: 20px
+			text-align: center
+			margin-bottom: 21px
+			margin-top: 40px
+		.column-main
+			text-align: center
 
-
-
+	.marketing
+		.square.center
+			background: $red-header-about

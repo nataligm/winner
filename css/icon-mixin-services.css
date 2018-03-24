@@ -1,0 +1,66 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-43 {
+  background-image: url(/images/sprite-services.png);
+  background-position: -46px 0px;
+  width: 46px;
+  height: 46px;
+}
+.icon-49 {
+  background-image: url(/images/sprite-services.png);
+  background-position: 0px -88px;
+  width: 46px;
+  height: 40px;
+}
+.icon-59 {
+  background-image: url(/images/sprite-services.png);
+  background-position: 0px -48px;
+  width: 48px;
+  height: 40px;
+}
+.icon-65 {
+  background-image: url(/images/sprite-services.png);
+  background-position: 0px -128px;
+  width: 48px;
+  height: 34px;
+}
+.icon-7 {
+  background-image: url(/images/sprite-services.png);
+  background-position: -46px -88px;
+  width: 46px;
+  height: 39px;
+}
+.icon-71 {
+  background-image: url(/images/sprite-services.png);
+  background-position: 0px 0px;
+  width: 46px;
+  height: 48px;
+}
+.icon-85 {
+  background-image: url(/images/sprite-services.png);
+  background-position: -92px 0px;
+  width: 40px;
+  height: 48px;
+}
+.icon-91 {
+  background-image: url(/images/sprite-services.png);
+  background-position: -132px 0px;
+  width: 40px;
+  height: 46px;
+}

@@ -1,0 +1,134 @@
+.latest-work
+	width: 100%
+	padding: 100px 0
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/bg/colored.png')
+	background-size: cover
+	h2
+		@include sec-title-black-raleway-semibold
+		color: #ececec
+		position: relative
+		&:after
+			content: ''
+			position: absolute	
+			@include red-line-section-title
+			top: 63px
+			right: 49%
+	.latest-work-subtitle
+		@include section-subtitle
+		color: #d1d1d1
+		max-width: 663px
+		margin: 0 auto 73px
+		padding: 0 10px
+
+.latest-work-nav
+	@include raleway-medium-font
+	display: flex
+	flex-wrap: wrap
+	max-width: 802px
+	font-size: 18px
+	color: #ececec
+	margin: 0 auto  90px
+	justify-content: space-around
+
+	a
+		margin: 10px 10px
+
+	.latest-work-link:hover
+		text-decoration: underline
+		color: #f3c614
+		span 
+			color: $red-header-about
+		
+.latest-work-container
+	max-width: 1367px
+	padding: 0 10px
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+
+.latest-work-img
+	width: 440px
+	position: relative
+
+	&:nth-child(-n+6)
+		margin-bottom: 24px
+		
+	.latest-work-btn-cover
+		display: none
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background: linear-gradient(rgba(10, 10, 14, 0.85), rgba(10, 10, 14, 0.85))
+		background-size: cover
+		background-repeat: no-repeat
+	
+
+	.more-info:hover, .view-larger:hover
+		box-shadow: 0 0 15px 0px #fff
+
+	.more-info:active, .view-larger:active
+		box-shadow: inset 0 0 5px 5px #444649
+		color: #777676
+		
+
+	.more-info, .view-larger
+		display: none
+		position: absolute
+		@include OpenSans-SemiBold 
+		font-weight: 400
+		background-color: #ffffff
+		text-transform: uppercase
+		color: #434343
+		font-size: 18px
+
+	.more-info	
+		padding: 14px 34px
+		top: 200px
+		left: 45px
+
+	.view-larger
+		top: 200px
+		right: 45px
+		padding: 14px 26px
+
+	&:hover
+		.latest-work-btn-cover
+			display: block
+			
+		.more-info, .view-larger
+			display: block
+
+
+
+	.is-active ~ .latest-work-btn-cover
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background: linear-gradient(rgba(10, 10, 14, 0.85), rgba(10, 10, 14, 0.85))
+		background-size: cover
+		background-repeat: no-repeat
+
+		.more-info, .view-larger
+			display: block
+			position: absolute
+			@include OpenSans-SemiBold 
+			font-weight: 400
+			background-color: #ffffff
+			text-transform: uppercase
+			color: #434343
+			font-size: 18px
+
+		.more-info	
+			padding: 14px 34px
+			top: 200px
+			left: 45px
+
+		.view-larger
+			top: 200px
+			right: 45px
+			padding: 14px 26px

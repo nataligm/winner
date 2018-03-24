@@ -129,6 +129,26 @@ gulp.task('sprite', function() {
     return merge(imgStream, cssStream);
 });
 
+gulp.task('sprite-service-icons', function() {
+    var spriteData = gulp.src('images/sprite-services/*.png').pipe(
+        spritesmith({
+            imgName: 'sprite-services.png',
+            cssName: 'icon-mixin-services.css',
+            imgPath: '/images/sprite-services.png',
+            // retinaImgName: 'sprite@2x.png',
+            // retinaSrcFilter: ['images/sprite/*@2x.png'],
+            cssVarMap: function(sprite) {
+                sprite.name = sprite.name;
+            }
+        })
+    );
+
+    var imgStream = spriteData.img.pipe(gulp.dest('images/'));
+    var cssStream = spriteData.css.pipe(gulp.dest('css/'));
+
+    return merge(imgStream, cssStream);
+});
+
 // публікація на gh-pages
 gulp.task('deploy', function() {
     return gulp.src('./public/**/*').pipe(ghPages());
