@@ -15,18 +15,26 @@
 	font-weight: 400
 	display: flex
 	align-items: center
-	a
+	.sign-up-btn
 		background-color: $red-header-about
 		color: #d8d8d8
 		border-radius: 4px
 		padding: 7px 9px
+		cursor: pointer
 	
-		
+		&:hover
+			background-color: #cc2828
+			color: #c1c1c1
+			border-color: #c1c1c1
+
+		&:active
+			background-color: #cc2828
+			color: #666666
+			border-color: #666666
+	
 	span
 		margin-right: 10px
 			
-		
-
 .socials-sprite
 	max-width: 167px
 	
@@ -36,6 +44,7 @@
 			transform: scale(1.2, 1.2)
 		&:active
 			transform: scale(0.95, 0.95)
+
 // ************ header-top *******************
 .header-navigation
 	background-color: #404040
@@ -171,12 +180,12 @@
 				margin-bottom: 34px
 
 			&:hover
-				background: radial-gradient(rgba(253, 47, 47, 1), rgba(253, 47, 47, 0.5))
+				background: #cc2828
 				color: #c1c1c1
 				border-color: #c1c1c1
 
 			&:active
-				box-shadow: inset 0 0 10px 0 black
+				background: #cc2828
 				color: #666666
 				border-color: #666666
 
