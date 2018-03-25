@@ -40,6 +40,15 @@ gulp.task('server', function() {
     gulp.watch('./sass/**/*', ['sass']);
 });
 
+gulp.task('server-prod-prev', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./public/"
+        },
+        port: "7777"
+    });
+});
+
 // компіляція sass/scss в css
 gulp.task('sass', function() {
     gulp.src(['./sass/**/*.scss', './sass/**/*.sass'])
@@ -143,7 +152,7 @@ gulp.task('sprite-service-icons', function() {
         })
     );
 
-    var imgStream = spriteData.img.pipe(gulp.dest('images/'));
+    var imgStream = spriteData.img.pipe(gulp.dest('gulpimages/'));
     var cssStream = spriteData.css.pipe(gulp.dest('css/'));
 
     return merge(imgStream, cssStream);

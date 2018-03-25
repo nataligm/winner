@@ -61,7 +61,7 @@
 			text-align: left
 
 			&::before
-				content: url(../images/shape-7.png)
+				content: url(/images/shape-7.png)
 				margin-right: 10px
 	
 // **************************************************
@@ -109,19 +109,26 @@
 		padding: 14px 61px
 
 	&:hover
-		width: 345px
+		//width: 345px
 		// height: 620px
-		padding-left: 15px
+		//padding-left: 15px
 		border: 3px solid $red-pricing-block
+		.package-type
+			padding-top: 16px
+			span
+				display: inline-block
+				background-color: $red-pricing-block
+				padding: 13px 14px
+				color: #fff
 
 	.package-type
 		padding-top: 42px
 		padding-bottom: 27px
 	.package-top-text
-		display: inline-block
-		background-color: $red-pricing-block
-		padding: 13px 14px
-		color: #fff
+		//display: inline-block
+		//background-color: $red-pricing-block
+		//padding: 13px 14px
+		//color: #fff
 	.get-started-btn
 		padding: 14px 70px
 	@media screen and (max-width: 1034px)
