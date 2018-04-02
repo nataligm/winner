@@ -17,37 +17,37 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 <i class="icon icon-home"></i>
 */
 .icon-behance {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: 0px -21px;
   width: 30px;
   height: 30px;
 }
 .icon-facebook {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -30px -21px;
   width: 30px;
   height: 30px;
 }
 .icon-google {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -60px -21px;
   width: 30px;
   height: 30px;
 }
 .icon-linkedin {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -90px -21px;
   width: 30px;
   height: 30px;
 }
 .icon-member-sprite {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: 0px 0px;
   width: 193px;
   height: 21px;
 }
 .icon-twitter {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -120px -21px;
   width: 30px;
   height: 30px;

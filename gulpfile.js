@@ -168,7 +168,7 @@ gulp.task('deploy', function() {
 // sass - для компіляції sass в css, тому що браузер 
 // не розуміє попередній синтаксис,
 // fileinclude - для того щоб з маленьких шаблонів зібрати повну сторінку
-gulp.task('default', ['server', 'sass', 'fileinclude', 'sprite']);
+gulp.task('default', ['server', 'sass', 'fileinclude']);
 
 // при виклику команди gulp production
 // будуть стиснуті всі ресурси в папку public
